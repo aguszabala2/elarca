@@ -1,0 +1,16 @@
+.info-contacto {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1/5;
+  margin-top: 70px;
+  margin-left: 10px;
+}
+
+.contacto {
+  padding: 5px;
+  margin: 0px 10px 10px 80px;
+}
+
+.contacto .formulario {
+  margin: 15px 10px 10px 20px;
+}

@@ -1,0 +1,61 @@
+$color-title: #d9ad26;
+$color-alt: rgb(109, 106, 106);
+$color-menu: #9e790b;
+$color-text: black;
+@mixin bs-margin {
+    margin-right: 10px;
+    padding-right: 10px;
+}
+@mixin hover-grey {
+    &:hover{
+        filter: grayscale(0%);
+    }
+}
+@mixin grayscale {
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.datos{
+    grid-row: 1/5;
+    .pink-d{
+        text-align: center;
+        margin: 100px 30px 5px;
+        transition: 0.5s;
+        opacity: 0%;
+    }
+}
+.galeria{
+    grid-row: 1/5;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 5px;
+    align-items: baseline;
+    .columna-gal{
+        flex: 25%;
+        padding: 5px;
+        img{
+            width: 100%;
+            padding-bottom: 5px;
+            @include grayscale();
+            &:hover{
+                filter: grayscale(0%);
+            }
+        }
+        .pink{ 
+            &:hover .datos > .pink-d{ 
+                opacity: 100%;
+            }
+                // quiero saber porque no funciona este hover de arriba
+        }
+    }
+}
+
+@media only screen  and (max-width: 800px){
+    .galeria{
+        order: 1
+    }
+    .datos{
+        order: 2;
+    }
+}

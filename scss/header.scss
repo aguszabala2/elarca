@@ -1,0 +1,29 @@
+$color-title: #d9ad26;
+$color-alt: rgb(109, 106, 106);
+$color-menu: #9e790b;
+$color-text: black;
+@mixin bs-margin {
+    margin-right: 5px;
+    padding-right: 5px;
+}
+
+header{
+    text-align: right;
+    h1{
+        font-family: 'Cinzel', serif;
+        font-weight: lighter;
+        font-size: 6rem;
+        @include bs-margin();
+        color: $color-title;
+        margin-top: 80px;
+        padding-bottom: 0px;
+    }
+    h2{
+        font-family: 'EB Garamond', serif;
+        font-size: 1.1rem;
+        color: $color-alt;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        @include bs-margin();
+    }    
+}

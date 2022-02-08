@@ -1,0 +1,117 @@
+$color-title: #d9ad26;
+$color-alt: rgb(109, 106, 106);
+$color-menu: #9e790b;
+$color-text: black;
+@mixin bs-margin {
+    margin-right: 10px;
+    padding-right: 10px;
+}
+@mixin hover-grey {
+    &:hover{
+        filter: grayscale(0%);
+    }
+}
+@mixin grayscale {
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.equipo{
+    grid-row: 1/5;
+    margin-top: 70px;
+    margin-left: 10px;
+    .contenedor-equipo{
+        display: flex;
+        flex-flow: column;
+        justify-items: center;
+        div{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            width: 100%;
+            h3{
+                margin-left: 20px;
+            }
+            img{
+                width: 60%;
+                margin: 30px;
+                justify-self: center;
+                @include grayscale();
+                @include hover-grey()
+            }
+            p{
+                text-align: justify;
+                padding: 5px 15px;
+            }
+        }
+    }
+    
+}
+.info{
+    grid-row: 1/5;
+    margin: 0px 10px 10px 80px;
+    padding: 5px;
+    .primer-parrafo{
+        margin: 30px 10px 10px 10px;
+    }
+    p{
+        margin: 5px 10px 10px 10px;
+    }
+    .oficina{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-right: 10px;
+        .columna{
+            display: flex;
+            flex: 50%;
+            flex-flow: column wrap;
+            img{
+                width: 100%;
+                padding: 5px;
+            }
+        }
+        .img-5{
+            flex: 50%;
+            width: 10%;
+            padding: 5px;
+        }
+        .img-6{
+            flex: 50%;
+            width: 10%;
+            padding: 5px;
+        }
+    }
+}
+
+@media only screen  and (max-width: 800px){
+    .info{
+        order: 1;
+        margin-left: 50px;
+        justify-self: center;
+        margin-bottom: 0px;
+    }
+    .equipo{
+        order: 2;
+        .contenedor-equipo{
+            div{
+                h3{
+                    text-align: center;
+                }
+                img{
+                    width: 30%;
+                    margin: 20px 36%;
+                    justify-self: center;
+                    @include grayscale();
+                    @include hover-grey()
+                }
+                p{
+                    text-align: justify;
+                    padding: 5px 15px;
+                    width: 500px;
+                    margin: 5px 15%;
+                }
+            }
+        }
+    }
+}
